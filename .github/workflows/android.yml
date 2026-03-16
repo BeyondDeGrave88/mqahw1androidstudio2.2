@@ -26,7 +26,7 @@ jobs:
       run: ./gradlew build
       
   test:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest                      
     steps:
     - uses: actions/checkout@v3
     - name: set up JDK 17
@@ -38,22 +38,21 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-      
+
     - name: run tests
       uses: reactivecircus/android-emulator-runner@v2
       with:
         api-level: 29
-        arch: arm64-v8a
+        arch: x86_64                             
         profile: Nexus 6
-        emulator-options: -no-window -no-snapshot -no-audio -no-boot-anim -no-snapshot-save -no-hvf -engine classic
+        emulator-options: -no-window -no-snapshot -no-audio -no-boot-anim -no-snapshot-save
         disable-animations: true
         emulator-boot-timeout: 600
         script: ./gradlew connectedCheck
-      
+
     - name: Upload test results
       if: always()
       uses: actions/upload-artifact@v4
       with:
         name: test-results
         path: app/build/reports/androidTests/
-        
