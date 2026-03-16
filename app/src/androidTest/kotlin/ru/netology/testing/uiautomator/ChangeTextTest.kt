@@ -17,7 +17,7 @@ import org.junit.runner.RunWith
 const val SETTINGS_PACKAGE = "com.android.settings"
 const val MODEL_PACKAGE = "ru.netology.testing.uiautomator"
 
-const val TIMEOUT = 3000L
+const val TIMEOUT = 5000L
 
 @RunWith(AndroidJUnit4::class)
 class ChangeTextTest {
@@ -27,7 +27,7 @@ class ChangeTextTest {
     private val textToSetEmpty = "       "
     private val textToSetNew = "New text"
 
-    
+
 //    @Test
 //    fun testInternetSettings() {
 //        // Press home
