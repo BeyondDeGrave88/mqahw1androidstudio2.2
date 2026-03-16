@@ -27,8 +27,7 @@ class ChangeTextTest {
     private val textToSetEmpty = "       "
     private val textToSetNew = "New text"
 
-
-
+    
 //    @Test
 //    fun testInternetSettings() {
 //        // Press home
