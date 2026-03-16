@@ -1,0 +1,1 @@
+[![Android CI](https://github.com/BeyondDeGrave88/mqahw1androidstudio2.2/actions/workflows/android.yml/badge.svg)](https://github.com/BeyondDeGrave88/mqahw1androidstudio2.2/actions/workflows/android.yml)
